@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Vinos Recomendados para Ti</h2>
+  <ul>
+    {% for vino in vinos %}
+      <li>{{ vino.nombre }} - {{ vino.tipo }} - {{ vino.anio }} ({{ vino.bodega }})</li>
+    {% empty %}
+      <li>No hay recomendaciones para mostrar.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
